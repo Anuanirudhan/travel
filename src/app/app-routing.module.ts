@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes }   from '@angular/router';
 import { LoginComponent } from './authentication/login/login.component';
 import { HomeComponent } from './home/home.component';
-import { AuthGuard } from './auth-guard.service';
+import { AuthGuard } from './authentication/services/auth-guard.service';
 
 const appRoutes: Routes = [
       { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -12,7 +12,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(appRoutes, {useHash: true})
+    RouterModule.forRoot(appRoutes, {useHash: false})
   ],
   declarations: [
     HomeComponent
